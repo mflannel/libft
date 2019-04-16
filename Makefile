@@ -6,7 +6,7 @@
 #    By: mflannel <mflannel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/08 17:02:35 by mflannel          #+#    #+#              #
-#    Updated: 2019/04/15 17:28:42 by mflannel         ###   ########.fr        #
+#    Updated: 2019/04/16 17:29:25 by mflannel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,6 +64,11 @@ SRC = ft_atoi.c\
                 ft_strtrim.c\
                 ft_tolower.c\
                 ft_toupper.c\
+                ft_lstnew.c\
+                ft_lstdelone.c\
+                ft_lstdel.c\
+                ft_lstadd.c\
+                ft_lstiter.c
 
 INCLUDES = libft.h
 

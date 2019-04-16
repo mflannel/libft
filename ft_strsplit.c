@@ -12,11 +12,6 @@
 
 #include "libft.h"
 
-int main(void)
-{
-	w
-}
-
 static char			**ft_freestr(char ***arr)
 {
 	size_t	i;
