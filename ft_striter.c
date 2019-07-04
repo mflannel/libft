@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mflannel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mflannel <mflannel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/10 16:25:59 by mflannel          #+#    #+#             */
-/*   Updated: 2019/04/13 18:09:01 by mflannel         ###   ########.fr       */
+/*   Created: 2019/04/10 19:50:55 by mflannel          #+#    #+#             */
+/*   Updated: 2019/07/04 21:03:20 by nick             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 void	ft_striter(char *s, void (*f)(char *))
 {

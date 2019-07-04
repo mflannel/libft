@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mflannel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mflannel <mflannel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/10 20:24:48 by mflannel          #+#    #+#             */
-/*   Updated: 2019/04/13 18:09:01 by mflannel         ###   ########.fr       */
+/*   Updated: 2019/07/04 21:03:20 by nick             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
-	int		i;
+	size_t	i;
 
 	if (!s)
 		return (NULL);

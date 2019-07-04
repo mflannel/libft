@@ -6,15 +6,15 @@
 /*   By: mflannel <mflannel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 14:50:31 by mflannel          #+#    #+#             */
-/*   Updated: 2019/04/13 18:09:01 by mflannel         ###   ########.fr       */
+/*   Updated: 2019/07/04 21:03:20 by nick             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 void	ft_putstr(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	if (s)

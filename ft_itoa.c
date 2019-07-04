@@ -6,37 +6,37 @@
 /*   By: mflannel <mflannel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 16:42:39 by mflannel          #+#    #+#             */
-/*   Updated: 2019/04/12 17:40:19 by mflannel         ###   ########.fr       */
+/*   Updated: 2019/07/04 21:03:20 by nick             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
-static void		ft_negative(int *n, int *negative)
+static void	ft_negative(int *n, int *neg)
 {
 	if (*n < 0)
 	{
 		*n *= -1;
-		*negative = 1;
+		*neg = 1;
 	}
 }
 
-char			*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	int		tmpn;
 	int		len;
-	int		negative;
+	int		neg;
 	char	*str;
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	tmpn = n;
 	len = 2;
-	negative = 0;
-	ft_negative(&n, &negative);
+	neg = 0;
+	ft_negative(&n, &neg);
 	while (tmpn /= 10)
 		len++;
-	len += negative;
+	len += neg;
 	if (!(str = ft_memalloc(len)))
 		return (NULL);
 	str[--len] = '\0';
@@ -45,7 +45,7 @@ char			*ft_itoa(int n)
 		str[len] = n % 10 + '0';
 		n = n / 10;
 	}
-	if (negative)
+	if (neg)
 		str[0] = '-';
 	return (str);
 }

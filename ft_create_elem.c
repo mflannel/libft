@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_create_elem.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mflannel <mflannel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/06 14:27:26 by mflannel          #+#    #+#             */
-/*   Updated: 2019/07/04 21:03:20 by nick             ###   ########.fr       */
+/*   Created: 2019/04/04 16:06:03 by mflannel          #+#    #+#             */
+/*   Updated: 2019/07/03 17:07:04 by mflannel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+t_list	*ft_create_elem(void *data)
 {
-	size_t i;
+	t_list *new_item;
 
-	i = 0;
-	if (n == 0)
-		return (0);
-	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0' && i < n - 1)
-		i++;
-	return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
+	if (!(new_item = (t_list*)malloc(sizeof(t_list))))
+		return (NULL);
+	new_item->content = data;
+	new_item->next = NULL;
+	return (new_item);
 }

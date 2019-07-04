@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mflannel <mflannel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/06 14:27:26 by mflannel          #+#    #+#             */
-/*   Updated: 2019/07/04 21:03:20 by nick             ###   ########.fr       */
+/*   Created: 2019/04/10 16:14:36 by mflannel          #+#    #+#             */
+/*   Updated: 2019/07/03 17:07:04 by mflannel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+void	ft_swap(int *a, int *b)
 {
-	size_t i;
+	int tmp_a;
 
-	i = 0;
-	if (n == 0)
-		return (0);
-	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0' && i < n - 1)
-		i++;
-	return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
+	tmp_a = *a;
+	*a = *b;
+	*b = tmp_a;
 }

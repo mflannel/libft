@@ -6,17 +6,19 @@
 /*   By: mflannel <mflannel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 18:32:14 by mflannel          #+#    #+#             */
-/*   Updated: 2019/04/16 17:03:24 by mflannel         ###   ########.fr       */
+/*   Updated: 2019/07/04 21:03:20 by nick             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
-void    ft_lstdel(t_list **alst, void (*del)(void *, size_t))
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
 	t_list *lstx;
 	t_list *nextlstx;
 
+	if (!alst || !*alst || !del)
+		return ;
 	lstx = *alst;
 	while (lstx)
 	{

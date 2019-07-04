@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_islou.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mflannel <mflannel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/06 14:27:26 by mflannel          #+#    #+#             */
-/*   Updated: 2019/07/04 21:03:20 by nick             ###   ########.fr       */
+/*   Created: 2019/04/03 16:42:39 by mflannel          #+#    #+#             */
+/*   Updated: 2019/07/03 17:07:04 by mflannel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+void	ft_islou(const char c)
 {
-	size_t i;
+	char tmp;
 
-	i = 0;
-	if (n == 0)
-		return (0);
-	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0' && i < n - 1)
-		i++;
-	return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
+	if (!c)
+		return ;
+	tmp = c;
+	if (tmp >= 65 && tmp <= 90)
+		ft_putstr("Lower case\n");
+	else if (tmp >= 97 && tmp <= 122)
+		ft_putstr("Upper case\n");
+	else
+		ft_putstr("Not a letter\n");
 }

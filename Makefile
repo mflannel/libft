@@ -6,7 +6,7 @@
 #    By: mflannel <mflannel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/08 17:02:35 by mflannel          #+#    #+#              #
-#    Updated: 2019/04/16 17:29:25 by mflannel         ###   ########.fr        #
+#    Updated: 2019/07/04 21:03:20 by nick             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,13 +68,19 @@ SRC = ft_atoi.c\
                 ft_lstdelone.c\
                 ft_lstdel.c\
                 ft_lstadd.c\
-                ft_lstiter.c
+                ft_lstiter.c\
+                ft_lstmap.c\
+                ft_stoupper.c\
+                ft_stolower.c\
+                ft_create_elem.c\
+                ft_islou.c\
+                ft_swap.c
 
 INCLUDES = libft.h
 
 all: $(NAME)
 
-$(NAME): $(SRC) libft.h
+$(NAME): $(SRC) includes/libft.h
 	gcc -Wall -Wextra -Werror -c $(SRC) -I $(INCLUDES)
 	ar rc $(NAME) *.o
 	ranlib $(NAME)

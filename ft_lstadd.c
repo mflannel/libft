@@ -6,18 +6,18 @@
 /*   By: mflannel <mflannel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 18:32:14 by mflannel          #+#    #+#             */
-/*   Updated: 2019/04/16 17:36:45 by mflannel         ###   ########.fr       */
+/*   Updated: 2019/07/04 21:03:20 by nick             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
-void ft_lstadd(t_list **alst, t_list *new)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	if(!alst || !new)
+	if (!alst || !new)
 		return ;
 	{
-		new ->next = *alst;
+		new->next = *alst;
 		*alst = new;
 	}
 }
